@@ -33,8 +33,41 @@ function PrivacyPolicy() {
 }
 function About() {
   const { t } = useTranslation();
-  return <h2 className="text-2xl">{t("about.page_title")}</h2>;
+
+  return (
+    <div className="p-4 md:p-8 bg-gradient-to-br from-blue-50 to-blue-100 dark:from-gray-800 dark:to-gray-900 rounded-xl shadow-lg">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-center text-blue-700 dark:text-blue-300 mb-4 md:mb-6">
+        {t("about.page_title")}
+      </h1>
+
+      <p className="text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed mb-4 md:mb-6">
+        {t("about.description.part1")}
+      </p>
+
+      <div className="bg-white dark:bg-gray-800 p-4 md:p-6 rounded-lg shadow-inner">
+        <h2 className="text-lg sm:text-xl md:text-2xl font-bold text-blue-600 dark:text-blue-400 mb-3 md:mb-4">
+          {t("about.description.heading")}
+        </h2>
+        <ul className="list-disc list-inside space-y-2 sm:space-y-3 md:space-y-4 text-gray-700 dark:text-gray-300">
+          <li className="text-sm sm:text-base md:text-lg">{t("about.description.part2")}</li>
+          <li className="text-sm sm:text-base md:text-lg">{t("about.description.part3")}</li>
+        </ul>
+      </div>
+
+      <p className="mt-4 md:mt-6 text-sm sm:text-base md:text-lg text-gray-800 dark:text-gray-300 leading-relaxed">
+        {t("about.description.part4")}
+      </p>
+
+      <div className="mt-6 md:mt-8 text-center">
+        <button className="px-4 md:px-6 py-2 md:py-3 bg-blue-600 text-white font-bold rounded-lg shadow-lg hover:bg-blue-700 dark:hover:bg-blue-500 transition duration-300">
+          {t("about.cta_button")}
+        </button>
+      </div>
+    </div>
+  );
 }
+
+
 
 
 function Services() {
@@ -129,59 +162,59 @@ function App() {
         <div className="flex">
           {/* Sidebar */}
           <div
-            className={`h-screen bg-gray-100 dark:bg-gray-800 shadow-lg transition-all duration-500 ease-in-out ${
-              isSidebarOpen ? "w-64" : "w-16"
-            }`}
-          >
-     <div className="p-4">
-  <Link
-    to="/"
-    className="flex items-center mb-4 text-black dark:text-white"
-    onClick={() => setIsSidebarOpen(false)}
-  >
-    <FaHome className="mr-2" />
-    <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-      {t("navbar.home")}
-    </span>
-  </Link>
-  <Link
-    to="/about"
-    className="flex items-center mb-4 text-black dark:text-white"
-    onClick={() => setIsSidebarOpen(false)}
-  >
-    <FaUsers className="mr-2" />
-    <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-      {t("navbar.about")}
-    </span>
-  </Link>
-  <Link
-    to="/services"
-    className="flex items-center mb-4 text-black dark:text-white"
-    onClick={() => setIsSidebarOpen(false)}
-  >
-    <FaCogs className="mr-2" />
-    <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-      {t("navbar.services")}
-    </span>
-  </Link>
-  <Link
-    to="/contact"
-    className="flex items-center mb-4 text-black dark:text-white"
-    onClick={() => setIsSidebarOpen(false)}
-  >
-    <FaPhone className="mr-2" />
-    <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
-      {t("navbar.contact")}
-    </span>
-  </Link>
+  className={`h-screen bg-gray-100 dark:bg-gray-800 shadow-lg transition-all duration-500 ease-in-out ${
+    isSidebarOpen ? "w-64" : "w-16"
+  } overflow-y-auto`}
+>
+  <div className="p-4">
+    <Link
+      to="/"
+      className="flex items-center mb-4 text-black dark:text-white"
+      onClick={() => setIsSidebarOpen(false)}
+    >
+      <FaHome className="mr-2" />
+      <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+        {t("navbar.home")}
+      </span>
+    </Link>
+    <Link
+      to="/about"
+      className="flex items-center mb-4 text-black dark:text-white"
+      onClick={() => setIsSidebarOpen(false)}
+    >
+      <FaUsers className="mr-2" />
+      <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+        {t("navbar.about")}
+      </span>
+    </Link>
+    <Link
+      to="/services"
+      className="flex items-center mb-4 text-black dark:text-white"
+      onClick={() => setIsSidebarOpen(false)}
+    >
+      <FaCogs className="mr-2" />
+      <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+        {t("navbar.services")}
+      </span>
+    </Link>
+    <Link
+      to="/contact"
+      className="flex items-center mb-4 text-black dark:text-white"
+      onClick={() => setIsSidebarOpen(false)}
+    >
+      <FaPhone className="mr-2" />
+      <span className={`${isSidebarOpen ? "block" : "hidden"}`}>
+        {t("navbar.contact")}
+      </span>
+    </Link>
+  </div>
 </div>
 
-          </div>
 
           
           <div
             className={`transition-all duration-500 ease-in-out ${
-              isSidebarOpen ? "pl-64" : "pl-16"
+              isSidebarOpen ? "pl-50" : "pl-16"
             } w-full min-h-screen bg-white dark:bg-gray-900 text-black dark:text-white p-8`}
           >
             {/* Routes */}

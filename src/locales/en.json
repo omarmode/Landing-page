@@ -6,7 +6,7 @@
       "contact": "Contact Us"
     },
     "footer": {
-      "company": "Uniqlink",
+      "company": "UNIQLINK",
       "policies": "Policies",
       "privacy_policy": "Privacy Policy",
       "terms_of_service": "Terms of Service",
@@ -19,8 +19,15 @@
       "page_title": "Welcome to Home Page"
     },
     "about": {
-      "page_title": "About Us Page"
-    },
+        "page_title": "About UNIQLINK",
+        "description": {
+          "part1": "UNIQLINK is a corporation based in Riyadh, Saudi Arabia, managed by a team of highly skilled professionals in the field of information technology. The company specializes in consulting services across various domains, including software development, IT infrastructure management, security infrastructure design, quality assurance, and implementation.",
+          "part2": "UNIQLINK possesses extensive experience in delivering solutions within both single and multi-operating system environments.",
+          "part3": "Through its strategic alliances, the organization is capable of achieving objectives that would be unattainable for a single entity. Such partnerships are founded on a win-win philosophy, characterized by mutual trust, commitment, and the equitable distribution of risks and rewards, ultimately benefiting the customers directly.",
+          "part4": "Our team has accumulated many years of collective experience in consulting with organizations and implementing both the solutions we propose and those explicitly requested by our clients.",
+          "cta_button": "Learn More"
+        }
+      },
     "services": {
       "page_title": "Services Page"
     }
