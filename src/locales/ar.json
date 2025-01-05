@@ -1,0 +1,28 @@
+{
+    "navbar": {
+      "home": "الرئيسية",
+      "about": "من نحن",
+      "services": "الخدمات",
+      "contact": "اتصل بنا"
+    },
+    "footer": {
+      "company": "يونيك لينك",
+      "policies": "السياسات",
+      "privacy_policy": "سياسة الخصوصية",
+      "terms_of_service": "شروط الخدمة",
+      "contact_info": "معلومات الاتصال",
+      "email": "البريد الإلكتروني",
+      "phone": "الهاتف",
+      "address": "العنوان"
+    },
+    "home": {
+      "page_title": "مرحبًا بكم في الصفحة الرئيسية"
+    },
+    "about": {
+      "page_title": "صفحة من نحن"
+    },
+    "services": {
+      "page_title": "صفحة الخدمات"
+    }
+  }
+  
